@@ -30,6 +30,8 @@ services:
     depends_on:
       panel:
         condition: service_started
+      cache:
+        condition: service_started
     env_file: ./conf.d/panel.env
     image: ccarney16/pterodactyl-panel:latest
     labels:
